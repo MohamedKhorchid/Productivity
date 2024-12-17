@@ -6,9 +6,9 @@ workflows:
       xcode: latest
       cocoapods: default
       app_store_connect:
-        api_key: Encrypted(api_key)
-        key_id: YOUR_KEY_ID
-        issuer_id: YOUR_ISSUER_ID
+        api_key: $API_KEYS
+        key_id: 7YVW5HR78A
+        issuer_id: 373dae42-6ed9-4b2f-b003-64582bc4c3a0
 
     scripts:
       - name: Get Flutter packages

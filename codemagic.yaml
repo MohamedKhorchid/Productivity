@@ -5,6 +5,8 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
+
+    integrations:
       app_store_connect:
         api_key: $API_KEYS
         key_id: 7YVW5HR78A

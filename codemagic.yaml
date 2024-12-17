@@ -8,7 +8,7 @@ workflows:
 
     integrations:
       app_store_connect:
-        api_key: Encrypted($API_KEYS)
+        api_key: $API_KEYS
         key_id: 7YVW5HR78A
         issuer_id: 373dae42-6ed9-4b2f-b003-64582bc4c3a0
 

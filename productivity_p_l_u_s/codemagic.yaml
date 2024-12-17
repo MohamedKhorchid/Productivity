@@ -1,0 +1,26 @@
+workflows:
+  ios-release-workflow:
+    name: iOS Release Workflow
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      app_store_connect:
+        api_key: Encrypted(api_key)
+        key_id: YOUR_KEY_ID
+        issuer_id: YOUR_ISSUER_ID
+
+    scripts:
+      - name: Get Flutter packages
+        script: flutter pub get
+
+      - name: Build iOS release
+        script: flutter build ios --release --no-codesign
+
+    artifacts:
+      - build/ios/iphoneos/*.ipa
+
+    publishing:
+      app_store_connect:
+        auth: integration  # Utilise l'intégration pour App Store Connect
+        submit_to_testflight: true
